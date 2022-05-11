@@ -12,15 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/get_method?name=Sergey&age=27",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/get_method?name=Sergey&age=27",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"get_method"
 					],
@@ -64,15 +60,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://162.55.220.72:5005/user_info_3",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/user_info_3",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"user_info_3"
 					]
@@ -86,15 +78,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/object_info_1?name=Sergey&age=27&weight=80",
-					"protocol": "http",
+					"raw": "{{url}}:{{port}}/object_info_1?name=Sergey&age=27&weight=80",
 					"host": [
-						"162",
-						"55",
-						"220",
-						"72"
+						"{{url}}"
 					],
-					"port": "5005",
+					"port": "{{port}}",
 					"path": [
 						"object_info_1"
 					],
@@ -120,7 +108,31 @@
 			"name": "EP_4",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{url}}:{{port}}/object_info_2?name=Sergey&age=27&salary=3000",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sergey"
+						},
+						{
+							"key": "age",
+							"value": "27"
+						},
+						{
+							"key": "salary",
+							"value": "3000"
+						}
+					]
+				}
 			},
 			"response": []
 		},
