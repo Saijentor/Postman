@@ -140,7 +140,31 @@
 			"name": "EP_5",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{url}}:{{port}}/object_info_3?name=Sergey&age=27&salary=3000",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sergey"
+						},
+						{
+							"key": "age",
+							"value": "27"
+						},
+						{
+							"key": "salary",
+							"value": "3000"
+						}
+					]
+				}
 			},
 			"response": []
 		},
