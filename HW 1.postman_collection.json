@@ -172,7 +172,31 @@
 			"name": "EP_6",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{url}}:{{port}}/object_info_4?name=Sergey&age=27&salary=3000",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sergey"
+						},
+						{
+							"key": "age",
+							"value": "27"
+						},
+						{
+							"key": "salary",
+							"value": "3000"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -180,7 +204,37 @@
 			"name": "EP_7",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sergey",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "27",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "3000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}:{{port}}/user_info_2",
+					"host": [
+						"{{url}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user_info_2"
+					]
+				}
 			},
 			"response": []
 		}
