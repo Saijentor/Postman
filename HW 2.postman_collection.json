@@ -13,7 +13,9 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -57,7 +59,24 @@
 							"let user_salary = jsonData.salary;\r",
 							"pm.test(\"Salary is correct\", function(){\r",
 							"    pm.expect(user_salary).to.eql(3000)\r",
-							"});"
+							"});\r",
+							"\r",
+							"console.log(jsonData.family);\r",
+							"\r",
+							"let sl15yr = jsonData.u_salary_1_5_year;\r",
+							"let slr = pm.request.salary * 4;\r",
+							"pm.test(\"Salary after 1.5 year is correct\", function(){\r",
+							"    pm.test(sl15yr).to.eql(slr)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -100,7 +119,7 @@
 			"response": []
 		},
 		{
-			"name": "EP_4",
+			"name": "-",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -132,7 +151,7 @@
 			"response": []
 		},
 		{
-			"name": "EP_5",
+			"name": "--",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -164,7 +183,7 @@
 			"response": []
 		},
 		{
-			"name": "EP_6",
+			"name": "---",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -196,7 +215,7 @@
 			"response": []
 		},
 		{
-			"name": "EP_7",
+			"name": "----",
 			"request": {
 				"method": "POST",
 				"header": [],
