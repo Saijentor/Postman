@@ -15,6 +15,11 @@
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let resp = pm.response.text();\r",
+							"pm.test(\"String is correct\", function () {\r",
+							"\tpm.expect(resp).to.include(\"This is the first responce from server!\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -45,6 +50,7 @@
 					"script": {
 						"exec": [
 							"let jsonData = pm.response.json();\r",
+							"// let jsonData = JSON.parse(responseBody);\r",
 							"\r",
 							"let user_name = jsonData.name;\r",
 							"pm.test(\"Name is correct\", function(){\r",
@@ -61,12 +67,12 @@
 							"    pm.expect(user_salary).to.eql(3000)\r",
 							"});\r",
 							"\r",
-							"console.log(jsonData.family);\r",
+							"console.log(\"Family contains =\",jsonData.family);\r",
 							"\r",
-							"let sl15yr = jsonData.u_salary_1_5_year;\r",
-							"let slr = pm.request.salary * 4;\r",
+							"let req = pm.request.body.formdata.get(\"salary\");\r",
+							"let sl15yr = jsonData.family.u_salary_1_5_year;\r",
 							"pm.test(\"Salary after 1.5 year is correct\", function(){\r",
-							"    pm.test(sl15yr).to.eql(slr)\r",
+							"    pm.expect(sl15yr).to.eql(req * 4)\r",
 							"})"
 						],
 						"type": "text/javascript"
