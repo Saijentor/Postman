@@ -124,7 +124,7 @@
 			"response": []
 		},
 		{
-			"name": "object_info_3",
+			"name": "Object_info_3",
 			"event": [
 				{
 					"listen": "test",
@@ -221,39 +221,53 @@
 			"response": []
 		},
 		{
-			"name": "--",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url}}:{{port}}/object_info_3?name=Sergey&age=27&salary=3000",
-					"host": [
-						"{{url}}"
-					],
-					"port": "{{port}}",
-					"path": [
-						"object_info_3"
-					],
-					"query": [
-						{
-							"key": "name",
-							"value": "Sergey"
-						},
-						{
-							"key": "age",
-							"value": "27"
-						},
-						{
-							"key": "salary",
-							"value": "3000"
-						}
-					]
+			"name": "Object_info_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"let requestData = pm.request.url.query.toObject()\r",
+							"\r",
+							"pm.test(\"Name is correct\", function(){\r",
+							"    pm.expect(jsonData.name).to.eql(requestData.name)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Age is correct\", function(){\r",
+							"    pm.expect(+jsonData.age).to.eql(+requestData.age)\r",
+							"});\r",
+							"\r",
+							"console.log(+requestData.salary)\r",
+							"console.log(jsonData.salary)\r",
+							"console.log(+jsonData.salary[0])\r",
+							"console.log(+jsonData.salary[1])\r",
+							"console.log(+jsonData.salary[2])\r",
+							"\r",
+							"pm.test(\"Salary[0] is correct\", function(){\r",
+							"    pm.expect(+jsonData.salary[0]).to.eql(+requestData.salary)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Salary[1] is correct\", function(){\r",
+							"    pm.expect(+jsonData.salary[1]).to.eql(+requestData.salary * 2)\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Salary[2] is correct\", function(){\r",
+							"    pm.expect(+jsonData.salary[2]).to.eql(+requestData.salary * 3)\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"name\", requestData.name);\r",
+							"pm.environment.set(\"age\", requestData.age);\r",
+							"pm.environment.set(\"salary\", requestData.salary);\r",
+							"\r",
+							"for (i = 0; i<jsonData.salary.length; i++){\r",
+							"    console.log(\"salary[\"+i+\"] =\", +jsonData.salary[i]);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "---",
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -285,7 +299,7 @@
 			"response": []
 		},
 		{
-			"name": "----",
+			"name": "User_info_2",
 			"request": {
 				"method": "POST",
 				"header": [],
