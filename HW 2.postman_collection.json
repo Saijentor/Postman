@@ -300,6 +300,29 @@
 		},
 		{
 			"name": "User_info_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"let requestData = pm.request.body.formdata;\r",
+							"\r",
+							"console.log(requestData)\r",
+							"\r",
+							"pm.test(\"Response have property start_qa_salary\", function(){\r",
+							"    pm.expect(jsonData).to.have.property(\"start_qa_salary\")\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response have property qa_salary_after_6_months\", function(){\r",
+							"    pm.expect(jsonData).to.have.property(\"qa_salary_after_6_months\")\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -308,17 +331,17 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Sergey",
+							"value": "{{name}}",
 							"type": "text"
 						},
 						{
 							"key": "age",
-							"value": "27",
+							"value": "{{age}}",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "3000",
+							"value": "{{salary}}",
 							"type": "text"
 						}
 					]
