@@ -260,7 +260,7 @@
 							"});\r",
 							"\r",
 							"console.log(+requestData.salary)\r",
-							"console.log(jsonData.salary)\r",
+							"console.log(+jsonData.salary)\r",
 							"console.log(+jsonData.salary[0])\r",
 							"console.log(+jsonData.salary[1])\r",
 							"console.log(+jsonData.salary[2])\r",
