@@ -1,21 +1,21 @@
 http://162.55.220.72:5005/first
-1. Отправить запрос.
-2. Статус код 200
-3. Проверить, что в body приходит правильный string.
+1. Send a request.
+2. Status code 200
+3. Check that the correct string is coming to the body.
 
 http://162.55.220.72:5005/user_info_3
-1. Отправить запрос.
-2. Статус код 200
-3. Спарсить response body в json.
-4. Проверить, что name в ответе равно name s request (name вбить руками.)
-5. Проверить, что age в ответе равно age s request (age вбить руками.)
-6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-7. Спарсить request.
-8. Проверить, что name в ответе равно name s request (name забрать из request.)
-9. Проверить, что age в ответе равно age s request (age забрать из request.)
-10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-11. Вывести в консоль параметр family из response.
-12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+1. Send a request.
+2. Status code 200
+3. Parse the response body in json.
+4. Check that name in the response is equal to name request (name to drive in with your hands.)
+5. Check that age in the response is equal to age s request (age to drive in with your hands.)
+6. Check that salary in the response is equal to salary s request (salary to drive in with your hands.)
+7. Parse request.
+8. Check that name in the response is equal to name s request (name to take from request.)
+9. Check that age in the response is equal to age s request (age to take from request.)
+10. Check that salary in the response is equal to salary s request (salary to take from request.)
+11. Output the family parameter from response to the console.
+12. Check that u_salary_1_5_year in the response is equal to salary*4 (take salary from request).
 
 http://162.55.220.72:5005/object_info_3
 1. Отправить запрос.
