@@ -56,29 +56,29 @@ _Contains two homework assignments._
 #### Continued in this file -> [HW 1](https://github.com/Saijentor/Postman/blob/main/HW%201.postman_collection.json)
 ***
 ## Postman [Homework 2](https://github.com/Saijentor/Postman/blob/main/Postman%20HW2.txt):
-* Спарсить response body в json: 
+* Parse the response body in json:
 ``` js
 let jsonData = pm.response.json() 
 ```
-* Проверить, что 1-й элемент параметра salary равен salary*2 из request: 
+* Check that the 1st element of the salary parameter is equal to salary*2 from request:
 ``` js
 pm.test("Salary[1] is correct", function(){
     pm.expect(+jsonData.salary[1]).to.eql(+requestData.salary * 2)
 });
 ``` 
-* Написать цикл который выведет в консоль по порядку элементы списка из параметра salary: 
+* Write a loop that outputs the list items from the salary parameter to the console in order: 
 ``` js
 for (i = 0; i<jsonData.salary.length; i++){
     console.log(`salary ${i}: ${jsonData.salary[i]}`);
 } 
 ```
-* Проверить, что в параметре person, 1-й элемент из u_name равен salary из request: 
+* Check that in the person parameter, the 1st element from u_name is equal to salary from request: 
 ``` js
 pm.test("19: U_name element 1 = salary",function(){
     pm.expect(+jsonData.person.u_name[1]).to.eql(+requestData.salary)
 });
 ```
-* Написать цикл который выведет в консоль по порядку элементы списка из параметра person: 
+* Write a loop that outputs the list items from the person parameter to the console in order: 
 ``` js
 for (const property in jsonData.person) {
   console.log(`${property}: ${jsonData.person[property]}`);
