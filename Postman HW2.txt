@@ -18,41 +18,41 @@ http://162.55.220.72:5005/user_info_3
 12. Check that u_salary_1_5_year in the response is equal to salary*4 (take salary from request).
 
 http://162.55.220.72:5005/object_info_3
-1. Отправить запрос.
-2. Статус код 200
-3. Спарсить response body в json.
-4. Спарсить request.
-5. Проверить, что name в ответе равно name s request (name забрать из request.)
-6. Проверить, что age в ответе равно age s request (age забрать из request.)
-7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-8. Вывести в консоль параметр family из response.
-9. Проверить, что у параметра dog есть параметры name.
-10. Проверить, что у параметра dog есть параметры age.
-11. Проверить, что параметр name имеет значение Luky.
-12. Проверить, что параметр age имеет значение 4.
+1. Submit a request.
+2. Status code 200
+3. Parse the response body into json.
+4. Parse the request.
+5. Checking that the name in the response is equal to name s request (take the name from the request.)
+6. Checking that the age in the response is equal to the age of the request (take away the age from the request.)
+7. Checking that the salary in response is equal to the salary with the request (take the salary from the request.)
+8. Print the family parameter from the response to the console.
+9. Check that the dog parameter has name parameters.
+10. Checking that the dog parameter has age parameters.
+11. Verify that the parameter name is Luky.
+12. Verify that the age parameter is 4.
 
 http://162.55.220.72:5005/object_info_4
-1. Отправить запрос.
-2. Статус код 200
-3. Спарсить response body в json.
-4. Спарсить request.
-5. Проверить, что name в ответе равно name s request (name забрать из request.)
-6. Проверить, что age в ответе равно age из request (age забрать из request.)
-7. Вывести в консоль параметр salary из request.
-8. Вывести в консоль параметр salary из response.
-9. Вывести в консоль 0-й элемент параметра salary из response.
-10. Вывести в консоль 1-й элемент параметра salary параметр salary из response.
-11. Вывести в консоль 2-й элемент параметра salary параметр salary из response.
-12. Проверить, что 0-й элемент параметра salary равен salary из request (salary забрать из request.)
-13. Проверить, что 1-й элемент параметра salary равен salary*2 из request (salary забрать из request.)
-14. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
-15. Создать в окружении переменную name
-16. Создать в окружении переменную age
-17. Создать в окружении переменную salary
-18. Передать в окружение переменную name
-19. Передать в окружение переменную age
-20. Передать в окружение переменную salary
-21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
+1. Submit a request.
+2. Status code 200
+3. Parse response body into json.
+4. Parse request.
+5. Check that the name in the response is equal to name s request (take name from request.)
+6. Check that the age in the response is equal to the age from request (take age from request.)
+7. Print the salary parameter from request to the console.
+8. Print the salary parameter from response to the console.
+9. Print the 0th element of the salary parameter from response to the console.
+10. Print to the console the 1st element of the salary parameter, the salary parameter from response.
+11. Print to the console the 2nd element of the salary parameter, the salary parameter from response.
+12. Check that the 0th element of the salary parameter is equal to salary from request (pick salary from request.)
+13. Check that the 1st element of the salary parameter is equal to salary*2 from request (pick salary from request.)
+14. Check that the 2nd element of the salary parameter is equal to salary*3 from request (pick salary from request.)
+15. Create a variable name in the environment
+16. Create an environment variable age
+17. Create a salary variable in the environment
+18. Pass the name variable to the environment
+19. Pass the age variable to the environment
+20. Pass the salary variable to the environment
+21. Write a loop that will output the list elements from the salary parameter to the console in order.
 
 http://162.55.220.72:5005/user_info_2
 1. Вставить параметр salary из окружения в request
